@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "description": "FHIR HL7 Demo",
   "main": "server/index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "data/*",
+      "_/*"
+    ]
+  },
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "test": "mocha"
   },
   "author": "Andrew Rossman",
   "license": "ISC",
